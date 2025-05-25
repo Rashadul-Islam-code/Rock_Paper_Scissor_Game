@@ -43,21 +43,21 @@ optionImages.forEach((image, index) => {
         let userValue = ["R","P","S"][index];
 
         let outcomes = {
-            RR: "Draw",
-            RP: "Cpu",
-            RS: "User",
+            RR: "Victory is yours!",
+            RP: "Defeat! Try again!",
+            RS: "Victory is yours!",
             PP: "Draw",
-            PR: "User",
-            PS: "Cpu",
+            PR: "Victory is yours!",
+            PS: "Defeat! Try again!",
             SS: "Draw",
-            SR: "Cpu",
-            SP: "User",
+            SR: "Defeat! Try again!",
+            SP: "Victory is yours!",
         };
         let outComeValue = outcomes[userValue + cpuValue];
 
 
         // Display Result
-        result.textContent = userValue === cpuValue ? "Match Draw" : `${outComeValue} Won !!!`;
+        result.textContent = userValue === cpuValue ? "Match Draw" : `${outComeValue}`;
         // console.log(outComeValue);
 
 
